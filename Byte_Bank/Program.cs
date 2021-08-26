@@ -6,27 +6,22 @@ namespace Byte_Bank
     {
         static void Main(string[] args)
         {
-            ContaCorrente ContaDoJoao = new ContaCorrente();
-            ContaCorrente ContaDaJoana = new ContaCorrente();
+            Cliente João = new Cliente();
+            João.nome= "João";
+            João.profissao= "Desenvolvedor";
+            João.cpf= "6666666666";
 
-            ContaDoJoao.titular= "João";
-            ContaDoJoao.agencia= 100;
-            ContaDoJoao.numero= 666;
-            ContaDoJoao.saldo= 100;
-            
-            ContaDaJoana.titular = "Joana";
-            ContaDaJoana.agencia= 100;
-            ContaDaJoana.numero = 777;
-            ContaDaJoana.saldo = 250;
+            ContaCorrente ContaJoão = new ContaCorrente();
+            ContaJoão.titular= João;
+            ContaJoão.numero= 666;
+            ContaJoão.agencia= 0100;
+            ContaJoão.saldo= 6450;
 
-            Console.WriteLine("Saldo João:" + ContaDoJoao.saldo);
-            Console.WriteLine("Saldo Joana:" + ContaDaJoana.saldo);
+            Console.WriteLine(ContaJoão.titular.nome);
+            Console.WriteLine(ContaJoão.numero);
+            Console.WriteLine(ContaJoão.agencia);
+            Console.WriteLine(ContaJoão.saldo);
 
-            ContaDaJoana.Transferir(100, ContaDoJoao);
-
-            Console.WriteLine("Saldo João:" + ContaDoJoao.saldo);
-            Console.WriteLine("Saldo Joana:" + ContaDaJoana.saldo);
-            
             Console.ReadLine();
         }
     }
