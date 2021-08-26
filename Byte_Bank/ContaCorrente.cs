@@ -15,6 +15,10 @@ public class ContaCorrente
             this.saldo -= valor;
             return true;
         }
-        //test
+    
+    }
+    public void Depositar(double valor)
+    {
+        this.saldo += valor;
     }
 }
