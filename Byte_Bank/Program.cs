@@ -21,6 +21,9 @@ namespace Byte_Bank
             ContaDoJoao.Sacar(20);
             Console.WriteLine(ContaDoJoao.saldo);
 
+            ContaDoJoao.Depositar(120);
+            Console.WriteLine(ContaDoJoao.saldo);
+
             Console.ReadLine();
         }
     }
