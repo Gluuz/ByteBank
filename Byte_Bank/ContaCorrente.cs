@@ -1,6 +1,8 @@
+using Byte_Bank;
+
 public class ContaCorrente
 {
-    public string titular;
+    public Cliente titular;
     public int agencia;
     public int numero;
     public double saldo;
