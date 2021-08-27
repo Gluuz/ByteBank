@@ -11,15 +11,14 @@ namespace Byte_Bank
             João.Profissao= "Desenvolvedor";
             João.CPF= "6666666666";
 
-            ContaCorrente ContaJoão = new ContaCorrente();
+            ContaCorrente ContaJoão = new ContaCorrente(666, 48548);
             ContaJoão.Titular= João;
-            ContaJoão.numero= 666;
-            ContaJoão.agencia= 0100;
-            ContaJoão.Saldo = -120;
-
             
             
-            Console.WriteLine(ContaJoão.Saldo);
+           
+            
+            
+            Console.WriteLine(ContaJoão.Numero);
             
             Console.ReadLine();
         }
