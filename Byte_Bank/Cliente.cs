@@ -2,9 +2,11 @@ namespace Byte_Bank
 {
     public class Cliente
     {
-        public string nome;
-        public string cpf;
-        public string profissao;
+        public string Nome { get; set; }
+        
+        public string CPF { get; set; }
+        
+        public string Profissao { get; set; }
 
     }
 }
