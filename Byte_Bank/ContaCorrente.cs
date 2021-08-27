@@ -5,8 +5,24 @@ public class ContaCorrente
     public Cliente titular;
     public int agencia;
     public int numero;
-    public double saldo;
+    private double saldo = 100;
 
+    
+    public void DefinirSaldo(double valor)
+    {
+        if(valor <= 0){
+            return;
+        }
+        else
+        {
+            this.saldo = saldo;
+        }
+    }
+    public double ObterSaldo()
+    {
+        return saldo;
+    }
+    
     public bool Sacar(double valor)
     {
         if(this.saldo <= valor){
