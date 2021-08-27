@@ -1,26 +1,19 @@
 ﻿using System;
-
+using Byte_Bank.Funcionarios;
 namespace Byte_Bank
 {
   class Program
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
-            Cliente João = new Cliente();
-            João.Nome= "João";
-            João.Profissao= "Desenvolvedor";
-            João.CPF= "6666666666";
-
-            ContaCorrente ContaJoão = new ContaCorrente(666, 48548);
-            ContaJoão.Titular= João;
+            Funcionario Bruno = new Funcionario();
+            Bruno.Nome = "Bruno";
+            Bruno.CPF = "600.590.432-02";
+            Bruno.Salario = 600;
             
-            
-           Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
-            
-            
-            
+            Console.WriteLine(Bruno.Nome);
+            Console.WriteLine(Bruno.CPF);
+            Console.WriteLine(Bruno.Salario);
             
             Console.ReadLine();
         }
