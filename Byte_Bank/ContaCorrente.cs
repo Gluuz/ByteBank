@@ -15,7 +15,7 @@ public class ContaCorrente
         }
         else
         {
-            this.saldo = saldo;
+            this.saldo = valor;
         }
     }
     public double ObterSaldo()
