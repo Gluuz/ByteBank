@@ -6,6 +6,8 @@ namespace Byte_Bank
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
             Cliente João = new Cliente();
             João.Nome= "João";
             João.Profissao= "Desenvolvedor";
@@ -15,10 +17,10 @@ namespace Byte_Bank
             ContaJoão.Titular= João;
             
             
-           
+           Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
             
             
-            Console.WriteLine(ContaJoão.Numero);
+            
             
             Console.ReadLine();
         }
