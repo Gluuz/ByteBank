@@ -15,13 +15,12 @@ namespace Byte_Bank
             ContaJoão.titular= João;
             ContaJoão.numero= 666;
             ContaJoão.agencia= 0100;
-            ContaJoão.saldo= 6450;
+            
 
-            Console.WriteLine(ContaJoão.titular.nome);
-            Console.WriteLine(ContaJoão.numero);
-            Console.WriteLine(ContaJoão.agencia);
-            Console.WriteLine(ContaJoão.saldo);
-
+            Console.WriteLine(ContaJoão.ObterSaldo());
+            ContaJoão.DefinirSaldo(-10);
+            Console.WriteLine(ContaJoão.ObterSaldo());
+            
             Console.ReadLine();
         }
     }
