@@ -2,7 +2,7 @@ using Byte_Bank;
 
 public class ContaCorrente
 {
-    public Cliente titular;
+    public Cliente Titular {get; set;}
     public int agencia;
     public int numero;
     private double _saldo = 100;
