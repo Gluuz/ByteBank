@@ -3,8 +3,24 @@ using Byte_Bank;
 public class ContaCorrente
 {
     public Cliente Titular {get; set;}
-    public int agencia;
-    public int numero;
+    private int _agencia;
+    public int Agencia
+    {
+        get
+        {
+            return _agencia;
+        }
+        set
+        {
+            if(value <= 0)
+            {
+                return;
+            }
+
+            _agencia = value;
+        }
+    }
+    public int Numero;
     private double _saldo = 100;
 
     
@@ -23,6 +39,12 @@ public class ContaCorrente
                 _saldo = value;
             }
         }   
+    }
+
+    public ContaCorrente(int agencia, int numero)
+    {
+        Agencia = agencia;
+        Numero = numero;
     }
     public bool Sacar(double valor)
     {
