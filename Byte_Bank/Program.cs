@@ -19,9 +19,14 @@ namespace Byte_Bank
             Diretor roberta = new Diretor(5000, "4");
             roberta.Nome = "Roberta";
             roberta.Senha = "123";
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha= "321";
 
             sistemaInterno.Logar(roberta, "123");
-            sistemaInterno.Logar(roberta, "312");
+            sistemaInterno.Logar(roberta, "321");
+            sistemaInterno.Logar(parceiro, "123");
+            sistemaInterno.Logar(parceiro, "321");
+            
 
             
         }
