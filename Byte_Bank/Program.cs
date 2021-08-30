@@ -6,15 +6,15 @@ namespace Byte_Bank
     {
         static void Main(string[] args)
         {
-            Funcionario Bruno = new Funcionario("468548545");
+            Funcionario Bruno = new Funcionario(2000, "468548545");
             Bruno.Nome = "Bruno";
+            Bruno.AumentaSalario();
+            Console.WriteLine(Bruno.Salario);
             
-            Console.WriteLine(Funcionario.TotalDeFuncionarios);
             
-            
-            Funcionario Roberta = new Diretor("471568765");
-            
-            Console.WriteLine(Funcionario.TotalDeFuncionarios);
+            Funcionario Roberta = new Diretor(5000, "471568765");
+            Roberta.AumentaSalario();
+            Console.WriteLine(Roberta.Salario);
             Console.ReadLine();
         }
     }
