@@ -2,7 +2,7 @@ using Byte_Bank.SistemaInterno;
 
 namespace Byte_Bank.Funcionarios
 {
-    public class Diretor : Autenticavel
+    public class Diretor : FuncionarioAutenticavel
     {
        public Diretor(double salario, string cpf) : base(5000, cpf)
        {
