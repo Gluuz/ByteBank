@@ -47,6 +47,11 @@ public class ContaCorrente
     }
     public void Sacar(double valor)
     {
+        if(valor < 0)
+        {
+            throw new ArgumentException("Valor inválido para o Saque", nameof(valor));
+        }
+        
         if(this._saldo <= valor){
             throw new SaldoInsuficienteException(Saldo, valor);
         }
@@ -57,17 +62,14 @@ public class ContaCorrente
     {
         this._saldo += valor;
     }
-    public bool Transferir(double valor, ContaCorrente contaDestino)
+    public void Transferir(double valor, ContaCorrente contaDestino)
     {
-        if(this._saldo < valor)
+        if(valor < 0)
         {
-            return false;
+            throw new ArgumentException("Valor inválido para a Transferencia", nameof(valor));
         }
-        else
-        {
-            this._saldo -= valor;
-            contaDestino.Depositar(valor);
-            return true;
+        Sacar(valor);
+        contaDestino.Depositar(valor);
+            
         }
     }
-}
