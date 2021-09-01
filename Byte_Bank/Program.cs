@@ -9,11 +9,13 @@ namespace Byte_Bank
         {
             try
             {
-                ContaCorrente conta = new ContaCorrente(0, 0);
+                ContaCorrente conta = new ContaCorrente(15, 200);
+                conta.Saldo = 150;
+                conta.Sacar(200);
             }
-            catch (ArgumentException e)
+            catch (SaldoInsuficienteException e)
             {
-                Console.WriteLine("Ocorreu uma excessão do tipo ArgumentException");         
+                
                 Console.WriteLine(e.Message);  
             }
             
