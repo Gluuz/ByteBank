@@ -1,28 +1,14 @@
 using Byte_Bank;
+using System;
 
 public class ContaCorrente
 {
     public Cliente Titular {get; set;}
 
     public static int TotalDeContasCriadas {get; private set;}
-    private int _agencia;
-    public int Agencia
-    {
-        get
-        {
-            return _agencia;
-        }
-        set
-        {
-            if(value <= 0)
-            {
-                return;
-            }
-
-            _agencia = value;
-        }
-    }
-    public int Numero;
+    public int Agencia {get;}
+    
+    public int Numero {get;}
     private double _saldo = 100;
 
     
@@ -45,6 +31,19 @@ public class ContaCorrente
 
     public ContaCorrente(int agencia, int numero)
     {
+        if(agencia <= 0)
+        {
+            throw new ArgumentException("O argumento Agencia deve ser maior que 0");
+        }
+        if(numero <= 0)
+        {
+            throw new ArgumentException("O argumento Numero deve ser maior que 0");
+        }
+
+
+
+
+
         Agencia = agencia;
         Numero = numero;
 
