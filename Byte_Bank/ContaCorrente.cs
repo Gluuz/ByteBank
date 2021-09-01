@@ -29,33 +29,29 @@ public class ContaCorrente
         }   
     }
 
-    public ContaCorrente(int agencia, int numero)
+    public ContaCorrente(int numeroAgencia, int numeroConta)
     {
-        if(agencia <= 0)
+        if(numeroAgencia <= 0)
         {
-            throw new ArgumentException("O argumento Agencia deve ser maior que 0");
+            throw new ArgumentException("O argumento Agencia deve ser maior que 0", nameof(numeroAgencia));
         }
-        if(numero <= 0)
+        if(numeroConta <= 0)
         {
-            throw new ArgumentException("O argumento Numero deve ser maior que 0");
+            throw new ArgumentException("O argumento Numero deve ser maior que 0", nameof(numeroConta));
         }
 
-        Agencia = agencia;
-        Numero = numero;
+        Agencia = numeroAgencia;
+        Numero = numeroConta;
 
         TotalDeContasCriadas++;
     }
-    public bool Sacar(double valor)
+    public void Sacar(double valor)
     {
         if(this._saldo <= valor){
-            return false;
+            throw new SaldoInsuficienteException(Saldo, valor);
         }
-        else
-        {
-            this._saldo -= valor;
-            return true;
-        }
-    
+        this._saldo -= valor;
+        
     }
     public void Depositar(double valor)
     {
