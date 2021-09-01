@@ -7,7 +7,7 @@ public class ContaCorrente
 
     public static int TotalDeContasCriadas {get; private set;}
     public int Agencia {get;}
-    
+ 
     public int Numero {get;}
     private double _saldo = 100;
 
@@ -39,10 +39,6 @@ public class ContaCorrente
         {
             throw new ArgumentException("O argumento Numero deve ser maior que 0");
         }
-
-
-
-
 
         Agencia = agencia;
         Numero = numero;
